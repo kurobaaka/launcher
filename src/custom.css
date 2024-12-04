@@ -1,0 +1,53 @@
+body, input, select, textarea {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+:root {
+  --top-color: #6ead3c;
+  --top-border: #fff483c7;
+  --top-shadow: rgba(255, 255, 255, 0.62);
+
+  --top-filter: brightness(0.5);
+  --launch-filter: brightness(0.8);
+
+  --main-color: url(./assets/images/bg-wool-dark-light.png);
+  --secondary-color: var(--main-color);
+  --dropdown-color: var(--main-color);
+  --scroll-color: url(./assets/images/bg-wool-white.png);
+
+  --text-color-0: #ffffffe0;
+  --text-color-1: #ffffffe0;
+  --text-color-2: #ffffff80;
+  --text-color-3: #ffffffc0;
+  --link-color: #6ead3c;
+  --link-hover-color: #578830;
+
+  --input-color: #444;
+  --background: url(./assets/images/bg-wool-dark.png);
+}
+
+.scrollable, .scrollable-dialog .rc-dialog-body {
+  overflow: auto !important;
+}
+
+.scrollable::-webkit-scrollbar, .scrollable-dialog .rc-dialog-body::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.scrollable::-webkit-scrollbar-thumb, .scrollable-dialog .rc-dialog-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--scroll-color);
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.scrollable-dialog .rc-dialog-body::-webkit-scrollbar-thumb { background: white }
+
+.scrollable::-webkit-scrollbar-thumb:hover, .scrollable-dialog .rc-dialog-body::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2),
+    0 7px 10px 1px rgba(0, 0, 0, 0.14),
+    0 2px 16px 1px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,113 @@
+name: release
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build_windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Check release tag
+        run: node -e "if (require('./package.json').version !== '${{ github.ref }}'.replace('refs/tags/', '')) throw new Error('Wrong release tag!')"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build
+
+      - name: Pack app
+        run: npm run pack
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: app/dist
+
+      - name: Upload files
+        uses: ./.github/actions/upload
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          bucket: ${{ secrets.COS_BUCKET }}
+          files: release/win-ia32-unpacked/resources/app.asar release/nsis-web/PureLauncher.exe release/nsis-web/pure-launcher-{VERSION}-x64.nsis.7z?x64.nsis.7z release/nsis-web/pure-launcher-{VERSION}-ia32.nsis.7z?ia32.nsis.7z
+
+  build_macos:
+    runs-on: macos-latest
+    needs: build_windows
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+
+      - name: Pack app
+        run: npm run pack
+
+      - name: Upload files
+        uses: ./.github/actions/upload
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          bucket: ${{ secrets.COS_BUCKET }}
+          files: release/PureLauncher.dmg
+
+  build_linux:
+    runs-on: ubuntu-latest
+    needs: build_macos
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+
+      - name: Pack app
+        run: npm run pack
+
+      - name: Upload files to Github release
+        uses: ./.github/actions/upload
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          bucket: ${{ secrets.COS_BUCKET }}
+          final: true
+          files: release/PureLauncher.tar.gz release/PureLauncher.deb release/PureLauncher.rpm

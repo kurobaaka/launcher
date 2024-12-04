@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" style="opacity:0;transition:opacity 1s">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PureLauncher | 我的世界启动器</title>
+</head>
+<body>
+  <div id="top" class="top"></div>
+  <div id="top-logo"><img src="src/assets/images/logo.png"></img></div>
+  <div class="blocks" id="blocks0"></div>
+  <div class="blocks" id="blocks1"></div>
+  <div class="blocks" id="blocks2"></div>
+  <div id="top-buttons">
+    <button id="go-left">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+        <g data-sound="true" fill="#fdfcfb">
+          <path d="M352 112h32v32h-32v-32z" />
+          <path d="M320 144h32v32h-32v-32z" />
+          <path d="M288 176h32v32h-32v-32z" />
+          <path d="M256 208h32v32h-32v-32z" />
+          <path d="M224 240h32v32h-32v-32z" />
+          <path d="M256 272h32v32h-32v-32z" />
+          <path d="M288 304h32v32h-32v-32z" />
+          <path d="M320 336h32v32h-32v-32z" />
+          <path d="M352 368h32v32h-32v-32z" />
+        </g>
+        <g data-sound="true" fill="#889597">
+          <path d="M384 112h32v32h-32v-32z" />
+          <path d="M352 144h32v32h-32v-32z" />
+          <path d="M320 176h32v32h-32v-32z" />
+          <path d="M288 208h32v32h-32v-32z" />
+          <path d="M256 240h32v32h-32v-32z" />
+          <path d="M288 272h32v32h-32v-32z" />
+          <path d="M320 304h32v32h-32v-32z" />
+          <path d="M352 336h32v32h-32v-32z" />
+          <path d="M384 368h32v32h-32v-32z" />
+        </g>
+      </svg>
+    </button>
+    <button id="go-right">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+        <g data-sound="true" fill="#fdfcfb">
+          <path d="M96 112h32v32h-32v-32z" />
+          <path d="M128 144h32v32h-32v-32z" />
+          <path d="M160 176h32v32h-32v-32z" />
+          <path d="M192 208h32v32h-32v-32z" />
+          <path d="M224 240h32v32h-32v-32z" />
+          <path d="M192 272h32v32h-32v-32z" />
+          <path d="M160 304h32v32h-32v-32z" />
+          <path d="M128 336h32v32h-32v-32z" />
+          <path d="M96 368h32v32h-32v-32z" />
+        </g>
+        <g data-sound="true" fill="#889597">
+          <path d="M128 112h32v32h-32v-32z" />
+          <path d="M160 144h32v32h-32v-32z" />
+          <path d="M192 176h32v32h-32v-32z" />
+          <path d="M224 208h32v32h-32v-32z" />
+          <path d="M256 240h32v32h-32v-32z" />
+          <path d="M224 272h32v32h-32v-32z" />
+          <path d="M192 304h32v32h-32v-32z" />
+          <path d="M160 336h32v32h-32v-32z" />
+          <path d="M128 368h32v32h-32v-32z" />
+        </g>
+      </svg>
+    </button>
+    <button id="shrink">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+        <g data-sound="true" fill="#fdfcfb">
+          <path d="M352 112h32v32h-32v-32z" />
+          <path d="M320 144h32v32h-32v-32z" />
+          <path d="M288 176h32v32h-32v-32z" />
+          <path d="M256 208h32v32h-32v-32z" />
+          <path d="M224 240h32v32h-32v-32z" />
+          <path d="M256 272h32v32h-32v-32z" />
+          <path d="M288 304h32v32h-32v-32z" />
+          <path d="M320 336h32v32h-32v-32z" />
+          <path d="M352 368h32v32h-32v-32z" />
+        </g>
+        <g data-sound="true" fill="#889597">
+          <path d="M384 112h32v32h-32v-32z" />
+          <path d="M352 144h32v32h-32v-32z" />
+          <path d="M320 176h32v32h-32v-32z" />
+          <path d="M288 208h32v32h-32v-32z" />
+          <path d="M256 240h32v32h-32v-32z" />
+          <path d="M288 272h32v32h-32v-32z" />
+          <path d="M320 304h32v32h-32v-32z" />
+          <path d="M352 336h32v32h-32v-32z" />
+          <path d="M384 368h32v32h-32v-32z" />
+        </g>
+      </svg>
+    </button>
+    <button id="spread">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+        <g data-sound="true" fill="#fdfcfb">
+          <path d="M96 112h32v32h-32v-32z" />
+          <path d="M128 144h32v32h-32v-32z" />
+          <path d="M160 176h32v32h-32v-32z" />
+          <path d="M192 208h32v32h-32v-32z" />
+          <path d="M224 240h32v32h-32v-32z" />
+          <path d="M192 272h32v32h-32v-32z" />
+          <path d="M160 304h32v32h-32v-32z" />
+          <path d="M128 336h32v32h-32v-32z" />
+          <path d="M96 368h32v32h-32v-32z" />
+        </g>
+        <g data-sound="true" fill="#889597">
+          <path d="M128 112h32v32h-32v-32z" />
+          <path d="M160 144h32v32h-32v-32z" />
+          <path d="M192 176h32v32h-32v-32z" />
+          <path d="M224 208h32v32h-32v-32z" />
+          <path d="M256 240h32v32h-32v-32z" />
+          <path d="M224 272h32v32h-32v-32z" />
+          <path d="M192 304h32v32h-32v-32z" />
+          <path d="M160 336h32v32h-32v-32z" />
+          <path d="M128 368h32v32h-32v-32z" />
+        </g>
+      </svg>
+    </button>
+    <button id="close">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+        <g data-sound="true" fill="#fdfcfb">
+          <path d="M96 112h32v32h-32v-32z" />
+          <path d="M352 112h32v32h-32v-32z" />
+          <path d="M128 144h32v32h-32v-32z" />
+          <path d="M320 144h32v32h-32v-32z" />
+          <path d="M160 176h32v32h-32v-32z" />
+          <path d="M288 176h32v32h-32v-32z" />
+          <path d="M192 208h32v32h-32v-32z" />
+          <path d="M256 208h32v32h-32v-32z" />
+          <path d="M224 240h32v32h-32v-32z" />
+          <path d="M192 272h32v32h-32v-32z" />
+          <path d="M256 272h32v32h-32v-32z" />
+          <path d="M160 304h32v32h-32v-32z" />
+          <path d="M288 304h32v32h-32v-32z" />
+          <path d="M128 336h32v32h-32v-32z" />
+          <path d="M320 336h32v32h-32v-32z" />
+          <path d="M96 368h32v32h-32v-32z" />
+          <path d="M352 368h32v32h-32v-32z" />
+        </g>
+        <g data-sound="true" fill="#889597">
+          <path d="M128 112h32v32h-32v-32z" />
+          <path d="M384 112h32v32h-32v-32z" />
+          <path d="M160 144h32v32h-32v-32z" />
+          <path d="M352 144h32v32h-32v-32z" />
+          <path d="M192 176h32v32h-32v-32z" />
+          <path d="M320 176h32v32h-32v-32z" />
+          <path d="M224 208h32v32h-32v-32z" />
+          <path d="M288 208h32v32h-32v-32z" />
+          <path d="M256 240h32v32h-32v-32z" />
+          <path d="M224 272h32v32h-32v-32z" />
+          <path d="M288 272h32v32h-32v-32z" />
+          <path d="M192 304h32v32h-32v-32z" />
+          <path d="M320 304h32v32h-32v-32z" />
+          <path d="M160 336h32v32h-32v-32z" />
+          <path d="M352 336h32v32h-32v-32z" />
+          <path d="M128 368h32v32h-32v-32z" />
+          <path d="M384 368h32v32h-32v-32z" />
+        </g>
+      </svg>
+    </button>
+    <button id="hide">
+      <svg data-sound="true" version="1.1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 512 512">
+        <path fill="#e0e0e0" d="M96 240h288v32h-288v-32z"></path>
+        <path fill="#889597" d="M384 240h32v32h-32v-32z"></path>
+      </svg>
+    </button>
+  </div>
+  <main id="root"></main>
+  <style>.hide { display: none !important }</style>
+  <script>
+    (() => {
+      const blocks0 = document.getElementById('blocks0')
+      const blocks1 = document.getElementById('blocks1')
+      const blocks2 = document.getElementById('blocks2')
+      const count = 40 // window.innerWidth / 20 | 0
+      const colors2 = ['#7e512f', '#8c6a48', '#8b6428', '#885b3c', '#754b2e', '#c38a58', '#775237', '#775236',
+        '#905536', '#675432', '#735337', '#754b2e', '#975a35', '#70472f', '#8c6948', '#5f4939',
+        '#7e512f', '#8b6428', '#675d46', '#645634', '#6f6449']
+      const colors0 = ['#9bbf56', '#869f43', '#7fad3a', '#7ab53f', '#7ab139', '#7a993f', '#a5c95e', '#87b43e']
+      const colors1 = colors0.concat(colors2.slice(5))
+      const temp = document.createDocumentFragment()
+      const fn = (i, c, b) => {
+        const l = c.length
+        while (i++ < count) {
+          const elm = document.createElement('div')
+          elm.style.backgroundColor = c[Math.random() * l | 0]
+          temp.appendChild(elm)
+        }
+        const r = Array.from(temp.childNodes)
+        b.appendChild(temp)
+        return r
+      }
+      window.topBar = {
+        containers: [blocks0, blocks1, blocks2],
+        colors: [colors0, colors1, colors2],
+        blocks: [fn(0, colors0, blocks0), fn(2, colors1, blocks1), fn(16, colors2, blocks2)]
+      }
+
+      let timer1
+      window.animationStopped = true
+      window.startAnimation = () => {
+        if (!animationStopped) return
+        animationStopped = false
+        timer1 = setInterval(() => {
+          topBar.blocks[0][Math.random() * topBar.blocks[0].length | 0]
+            .style.backgroundColor = topBar.colors[0][Math.random() * topBar.colors[0].length | 0]
+          topBar.blocks[1][Math.random() * topBar.blocks[1].length | 0]
+            .style.backgroundColor = topBar.colors[1][Math.random() * topBar.colors[1].length | 0]
+          topBar.blocks[2][Math.random() * topBar.blocks[2].length | 0]
+            .style.backgroundColor = topBar.colors[2][Math.random() * topBar.colors[2].length | 0]
+        }, 100)
+      }
+      window.stopAnimation = () => {
+        if (animationStopped) return
+        animationStopped = true
+        clearInterval(timer1)
+      }
+    })()
+  </script>
+  <script src="src/index.tsx"></script>
+</body>
+</html>

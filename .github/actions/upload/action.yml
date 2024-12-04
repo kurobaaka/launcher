@@ -1,0 +1,23 @@
+name: upload
+description: Upload files.
+inputs:
+  files:
+    description: 'Files to uplad'
+    required: true
+  token:
+    description: 'Github token'
+    required: true
+  secretId:
+    description: 'The secret id of tencent cloud cos'
+    required: true
+  secretKey:
+    description: 'The secret key of tencent cloud cos'
+    required: true
+  bucket:
+    description: 'The bucket of tencent cloud cos'
+    required: true
+  final:
+    description: 'Is this the last step'
+runs:
+  using: 'node12'
+  main: index.js
