@@ -3,7 +3,7 @@ import Authenticator, { registerAuthenticator, Profile, SkinChangeable } from '.
 import { genUUID, fetchJson } from '../utils/index'
 import { OFFLINE_ACCOUNTS_FILE } from '../constants'
 
-const BASE_URL = 'https://authserver.mojang.com/'
+const BASE_URL = 'https://login.live.com/'
 const saveFile = () => profilesStore.saveLaunchProfileJson().catch(e => {
   console.error(e)
   throw new Error($('Fail to save files!'))
@@ -26,7 +26,7 @@ export const YGGDRASIL = 'yggdrasil'
       inputProps: { type: 'password', required: true }
     }
   ],
-  link: { name: () => $('Register'), url: () => 'https://my.minecraft.net/store/minecraft/#register' }
+  link: { name: () => $('Register'), url: () => 'https://login.live.com/' }
 })
 export class Yggdrasil extends Authenticator implements SkinChangeable {
   public async login (options: { email: string, password: string }) {

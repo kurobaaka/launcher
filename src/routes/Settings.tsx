@@ -106,29 +106,11 @@ const Settings: React.FC = () => {
               }, 1000)
             }
           }}>{$('Version')}: {version}</p>
-        <p>{$('Official Website')}:&nbsp;
-          <a
-            onClick={() => shell.openExternal('https://p.apisium.cn')}
-            role='link'
-          >p.apisium.cn</a>
-        </p>
         <p>{$('Source Code')}:&nbsp;
           <a
-            onClick={() => shell.openExternal('https://github.com/Apisium/PureLauncher')}
+            onClick={() => shell.openExternal('https://github.com/kurobaaka/launcher')}
             role='link'
-          >github.com/Apisium/PureLauncher</a>
-        </p>
-        <p>{$('Tencent QQ Group')}:&nbsp;
-          <a
-            onClick={() => shell.openExternal('https://jq.qq.com/?_wv=1027&k=5lSLiII')}
-            role='link'
-          >7923302</a>
-        </p>
-        <p>{$('Telegram Group')}:&nbsp;
-          <a
-            onClick={() => shell.openExternal('https://t.me/PureLauncher')}
-            role='link'
-          >t.me/PureLauncher</a>
+          >github.com/kurobaaka/launcher</a>
         </p>
       </div>
     </ShowMore>
